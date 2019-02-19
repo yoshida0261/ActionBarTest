@@ -15,10 +15,16 @@ class MainActivity : AppCompatActivity() {
 
         title = "main"
 
+
+        Thread.sleep(2000L)
+
         findViewById<Button>(R.id.button).setOnClickListener {
             val i  = Intent(this,SubActivity::class.java)
             startActivity(i)
+            finish()
+
         }
+        findViewById<Button>(R.id.button).setTextAppearance(R.style.ButtonFontStyle)
 
 
     }
